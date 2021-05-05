@@ -1,5 +1,5 @@
 # textarea-auto-hight
-[View Live Demo](http://textarea-auto-hight.bdroutines.com) or [View Live Demo](https://tasmir.github.io/textarea-auto-hight/index.html)
+[View Live Demo](http://textarea-auto-hight.bdroutines.com) or [View Live Demo](https://tasmir.github.io/textarea-auto-hight/)
 
 ### HTML
 ```
