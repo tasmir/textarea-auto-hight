@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Md. Tasmir Ahmed Rokon">
+	<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,tutorials,programming,learning,examples,source code,demos,tips,textarea hight auto adjust,textarea hight dynamic,Resize textarea">
+	<meta name="Description" content="Well organized and easy to understand Web building helpink kit.">
+
+	<title>Textarea Auto Hight</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+		<meta property="og:image" content="assets/img/fb.jpg" />
+	<meta property="og:type" content="website" /> 
+	<meta property="og:url" content="https://tasmir.info" />
+	<meta property="og:title" content="Md. Tasmir Ahmed Rokon" />
+	<meta property="og:description" content="Md. Tasmir Ahmed Rokon, Tasmir, Rokon, Programmer, PHP Developer, Laravel Developer, Web Devloper, Back-End Developer, Android-UI Developer, Front-End Developer" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154810930-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-154810930-1');
+	</script>
+
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+	<div class="container">
+		<div class="h1 text-center my-2">Textarea Auto Hight</div>
+		<div class="row">
+			<div class="col">
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Large textarea (Fixed Hight)</label>
+						<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10" name="inputCode"></textarea>
+					</div>
+				
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Large textarea (Auto Hight)</label>
+					<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	{    jQuery.fn.extend({
+		autoHeight: function () {
+			function autoHeight_(element) {
+				return jQuery(element).css({
+					'height': 'auto',
+					'overflow-y': 'hidden'
+				}).height(element.scrollHeight);
+			}
+			return this.each(function () {
+				autoHeight_(this).on('input', function () {
+					autoHeight_(this);
+				});
+			});
+		}
+	});
+	$('#exampleFormControlTextarea11').autoHeight();
+}
+</script>
+</body>
+</html>
